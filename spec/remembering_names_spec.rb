@@ -23,13 +23,25 @@
 require 'remembering_names'
 
 describe 'the remember_name method' do
-  it 'confirms that the name is stored' do
+  it "confirms that the name 'Emily' is stored" do
     expect(remember_name("Emily")).to eq "Name Remembered!"
   end
 end
 
 describe 'the show_names method' do
-  it 'gives the stored name' do
+  it "gives the stored name 'Emily'" do
       expect(show_names).to eq ["Emily"]
+  end
+end
+
+describe 'the remember_name method' do
+  it "confirms that another name 'Mark' can be stored" do
+    expect(remember_name("Mark")).to eq "Name Remembered!"
+  end
+end
+
+describe 'the show_names method' do
+  it "gives the stored names 'Emily' and 'Mark'" do
+      expect(show_names).to eq ["Emily", "Mark"]
   end
 end
