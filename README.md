@@ -37,6 +37,38 @@ User experience:
 > So that I can pay attention to my motivation  
 > I want an IRB application that stores my motivation ratings  
 
+Imagined interaction:
+```ruby
+> track_motivation(5)
+=> "Motivation stored!"
+> show_motivations
+=> [5]
+> track_motivation(6)
+=> "Motivation stored!"
+> show_motivations
+=> [5, 6]
+```
+
+For this part of the imagined example:
+```ruby
+> track_motivation(5)
+=> "Motivation stored!"
+```
+
+Write the expectation:
+```ruby
+expect(track_motivation(5)).to eq "Motivation stored!"
+```
+
+The full test:
+```ruby
+describe "the track_motivation method" do
+  it "gives us a friendly message" do
+    expect(track_motivation(5)).to eq "Motivation stored!"
+  end
+end
+```
+
 ## Assignment 1
 
 User experience:
